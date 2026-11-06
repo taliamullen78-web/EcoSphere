@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c32">
+  <meta name="description" content="Explore a sample sustainability breakdown for everyday products.">
+  <title>Product Analyzer | EcoSphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="EcoSphere home"><span class="brand-mark" aria-hidden="true">e</span><span>eco<span class="wordmark-light">sphere</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Brand Finder</a>
+      <a class="nav-link is-active" aria-current="page" href="analyzer.html">Product Analyzer</a>
+      <a class="nav-link" href="eco-map.html">Eco-Map</a>
+    </nav>
+    <a class="header-cta" href="eco-map.html">Shop nearby <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="analyzer-page">
+    <section class="analyzer-intro">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Product Analyzer <span class="eyebrow-divider">/</span> A clearer first look</p>
+      <h1>What's behind<br><em>what you buy?</em></h1>
+      <p class="analyzer-lead">A quick, illustrative read on materials, packaging, and sourcing. Not a product certification or a substitute for the label.</p>
+      <form class="analyzer-search" id="product-search-form">
+        <span class="search-icon" aria-hidden="true"></span>
+        <label class="sr-only" for="product-search">Search a product</label>
+        <input id="product-search" type="search" placeholder="Type a product (e.g., ‘shampoo’)" autocomplete="off" required>
+        <button class="button button-dark" type="submit">Analyze <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="suggestions"><span>Try</span><button type="button" data-suggestion="shampoo">shampoo</button><span>·</span><button type="button" data-suggestion="coffee pods">coffee pods</button><span>·</span><button type="button" data-suggestion="sneakers">sneakers</button></div>
+    </section>
+    <section class="analyzer-results" id="analyzer-results" aria-live="polite" aria-busy="false">
+      <div class="analyzer-placeholder" id="analyzer-placeholder">
+        <div class="placeholder-art" aria-hidden="true"><span class="placeholder-sun"></span><span class="placeholder-line placeholder-line-one"></span><span class="placeholder-line placeholder-line-two"></span><span class="placeholder-leaf">e</span></div>
+        <div><p class="eyebrow">A useful place to begin</p><h2>Curiosity is a<br><em>good first step.</em></h2><p>Search an everyday product to see a sample impact breakdown and a few practical things to look for.</p></div>
+        <span class="placeholder-index">01—04</span>
+      </div>
+      <article class="analysis-card" id="analysis-card" hidden></article>
+    </section>
+    <section class="method-note"><span class="method-icon">i</span><p><strong>About these results</strong><br>Scores are illustrative examples generated for this demo. They are not product-specific measurements, a life-cycle assessment, or independently verified claims.</p><a href="index.html#brand-finder" class="text-link">Browse certified brands <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark wordmark-footer" href="index.html"><span class="brand-mark" aria-hidden="true">e</span><span>eco<span class="wordmark-light">sphere</span></span></a><span>Small steps, wider circles.</span><span>Illustrative data · 2026</span></footer>
+</body>
+</html>
