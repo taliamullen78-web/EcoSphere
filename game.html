@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c32">
+  <meta name="description" content="Test your knowledge of sustainability labels, then play an arrow-key game to catch helpful labels and avoid harmful product practices.">
+  <title>Quiz: Test Your Knowledge | EcoSphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="EcoSphere home"><span class="brand-mark" aria-hidden="true">e</span><span>eco<span class="wordmark-light">sphere</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Brand Finder</a>
+      <a class="nav-link" href="analyzer.html">Product Analyzer</a>
+      <a class="nav-link" href="eco-map.html">Eco-Map</a>
+      <a class="nav-link is-active" aria-current="page" href="game.html">Test Your Knowledge</a>
+    </nav>
+    <a class="header-cta" href="sources.html">See the sources <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="game-page">
+    <section class="game-intro">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Quiz: Test Your Knowledge</p>
+      <h1>Test your knowledge.<br><em>Read the label.</em></h1>
+      <p>Six quick questions, no trick wording. Learn what B Corp, Leaping Bunny, and Fairtrade are designed to tell you—and where to look closer.</p>
+    </section>
+    <section class="game-card" aria-label="Certification quiz">
+      <div class="game-topline">
+        <span id="game-round">Ready when you are</span>
+        <div class="game-progress" id="game-progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="game-progress-fill"></span></div>
+        <span id="game-score">Score: 0</span>
+      </div>
+      <div class="game-content" id="game-content" aria-live="polite">
+        <div class="game-welcome">
+          <span class="game-spark" aria-hidden="true">✳</span>
+          <h2>Ready to spot the signals?</h2>
+          <p>Answer six questions about three well-known certifications. After each answer, you’ll get a little context—because the details matter.</p>
+          <button class="button button-dark" type="button" data-game-action="start">Let's play <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="arcade-section" aria-labelledby="arcade-title">
+      <div class="arcade-heading">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Play the label catcher</p>
+        <h2 id="arcade-title">Catch the good.<br><em>Dodge the bad.</em></h2>
+        <p>Use your arrow keys to collect responsible labels for points. Avoid harmful product practices or lose points.</p>
+      </div>
+      <div class="arcade-card">
+        <div class="arcade-topline">
+          <span id="arcade-status" aria-live="polite">Ready to play</span>
+          <span id="arcade-score">Score: 0</span>
+          <span id="arcade-time">Time: 45s</span>
+        </div>
+        <div class="arcade-board-wrap">
+          <canvas id="label-game" width="760" height="390" tabindex="0" aria-label="Label Catcher game board. Use the arrow keys to move and collect good labels while avoiding harmful practices."></canvas>
+          <div class="arcade-overlay" id="arcade-overlay">
+            <span class="arcade-overlay-mark" aria-hidden="true">✳</span>
+            <h3 id="arcade-overlay-title">Ready to play?</h3>
+            <p id="arcade-overlay-copy">Move with the arrow keys. Catch good labels for +10 points and dodge harmful practices to avoid losing 10.</p>
+          </div>
+        </div>
+        <div class="arcade-footer">
+          <div class="arcade-legend" aria-label="Scoring">
+            <span><i class="legend-good" aria-hidden="true">+</i> Responsible label <strong>+10</strong></span>
+            <span><i class="legend-bad" aria-hidden="true">−</i> Harmful practice <strong>−10</strong></span>
+          </div>
+          <button class="button button-dark" id="arcade-start" type="button">Start game <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="arcade-touch-controls" aria-label="Movement controls">
+          <button type="button" data-direction="up" aria-label="Move up">↑</button>
+          <button type="button" data-direction="left" aria-label="Move left">←</button>
+          <button type="button" data-direction="down" aria-label="Move down">↓</button>
+          <button type="button" data-direction="right" aria-label="Move right">→</button>
+        </div>
+        <p class="sr-only" id="arcade-announcement" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark wordmark-footer" href="index.html"><span class="brand-mark" aria-hidden="true">e</span><span>eco<span class="wordmark-light">sphere</span></span></a><span>Small steps, wider circles.</span><a href="sources.html">Sources &amp; credits</a><span>Learn at your own pace.</span></footer>
+</body>
+</html>
